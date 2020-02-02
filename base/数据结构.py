@@ -1,11 +1,10 @@
 # 元组
 # 创建元祖
-a = (12,5,6.12,True)
+a = (12, 5, 6.12, True)
 print(a)
-b = tuple([12.9,54,-8,False])
+b = tuple([12.9, 54, -8, False])
 print(b)
 print("-------------------------------------")
-
 
 # 注意情况
 c = (21)
@@ -16,23 +15,22 @@ e = ()
 print(type(e))
 print("-------------------------------------")
 
-
 # 元组访问
-arr = ("hello","world","Java",87,True)
+arr = ("hello", "world", "Java", 87, True)
 print(arr[0])
 print(arr[0:3])
 print(arr[0:4:2])
 print("-------------------------------------")
 
 # 元组拆包
-str1,str2,str3,num,t = arr
+str1, str2, str3, num, t = arr
 print(str1)
 print(str2)
 print(str3)
 print(num)
 print(t)
 print("-------------------------------------")
-str1,str2,*t = arr
+str1, str2, *t = arr
 print(str1)
 print(str2)
 print(t)
@@ -43,14 +41,13 @@ for item in arr:
     print(item)
 
 # 遍历时同时获取索引
-for i,item in enumerate(arr):
-    print("{0}-------{1}".format(i,item))
+for i, item in enumerate(arr):
+    print("{0}-------{1}".format(i, item))
 print("-------------------------------------")
-
 
 # 列表
 # 列表创建
-list1 = [15,89,21.5,True,"dadas"]
+list1 = [15, 89, 21.5, True, "dadas"]
 print(list1)
 print("-------------------------------------")
 list2 = list(arr)
@@ -68,8 +65,8 @@ print(list1 + list2)
 print("-------------------------------------")
 
 # 插入元素  insert方法可以向指定位置插入一个元素
-list3 = [15,89]
-list3.insert(0,"demo")
+list3 = [15, 89]
+list3.insert(0, "demo")
 print(list3)
 
 # 替换元素
@@ -83,13 +80,13 @@ res = list3.pop()
 print(res)
 print(list3)
 print("-------------------------------------")
-list4 = [15,78,49,326,158]
+list4 = [15, 78, 49, 326, 158]
 list4.pop(3)
 print(list4)
 print("-------------------------------------")
 
 # 其他常用方法
-list5 = [0,15,94,0,84,32,0,1]
+list5 = [0, 15, 94, 0, 84, 32, 0, 1]
 list5.reverse()  # 倒置列表
 print(list5)
 print("-------------------------------------")
@@ -98,41 +95,39 @@ print(list6)
 print("-------------------------------------")
 index = list5.index(84)  # 查找84的索引
 print(index)
-number = list5.count(0)   # 统计0的个数
+number = list5.count(0)  # 统计0的个数
 print(number)
 list5.clear()  # 清空所有元素
 print(list5)
 print("--------------------------------------")
 
-
 # 列表推导式
 # 获得 0～9 中偶数的平方数列
 list7 = []
-for i in range(0,10):
+for i in range(0, 10):
     if i % 2 == 0:
         list7.append(i ** 2)
 print(list7)
 print("--------------------------------------")
 # 用列表表达式实现
 list8 = []
-list8 = [i ** 2 for i in range(0,10) if i % 2 == 0]
+list8 = [i ** 2 for i in range(0, 10) if i % 2 == 0]
 print(list8)
 print("--------------------------------------")
-list9 = [i ** 2 for i in range(0,99) if i % 2 == 0 if i % 5 == 0]
+list9 = [i ** 2 for i in range(0, 99) if i % 2 == 0 if i % 5 == 0]
 print(list9)
 print("--------------------------------------")
 
-
 # 集合
 # 创建可变集合  如果有重复元素会自动剔除
-set1 = {15,"ads",True,89,15,True}
-set2 = set(("dasd",515,12.6,False,515))
+set1 = {15, "ads", True, 89, 15, True}
+set2 = set(("dasd", 515, 12.6, False, 515))
 print(set1)
 print("--------------------------------------")
 print(set2)
 print("--------------------------------------")
-print(len(set2))   # 获取元素个数
-set3 = {}   # 此种方式创建出来的是字典 要创建空集合 需要用set函数
+print(len(set2))  # 获取元素个数
+set3 = {}  # 此种方式创建出来的是字典 要创建空集合 需要用set函数
 print(type(set3))
 set4 = set()
 print(type(set4))
@@ -172,12 +167,12 @@ print("------------------------------------------")
 for item in set2:
     print(item)
 print("------------------------------------------")
-for i,item in enumerate(set2):
-    print("{0}--->{1}".format(i,item))
+for i, item in enumerate(set2):
+    print("{0}--->{1}".format(i, item))
 print("-------------------------------------------")
 
 # 创建不可变集合
-set5 = frozenset(("dada",True,False,True,5292,26.8))
+set5 = frozenset(("dada", True, False, True, 5292, 26.8))
 print(set5)
 print("--------------------------------------")
 
@@ -187,10 +182,10 @@ print(set6)
 
 # 字典
 # 创建字典
-dict1 = {15:"zh",18:"qi",97.6:True}
+dict1 = {15: "zh", 18: "qi", 97.6: True}
 print(dict1)
 print("---------------------------------------")
-dict2 = dict([(26,"dad"),(98,"dagg")])
+dict2 = dict([(26, "dad"), (98, "dagg")])
 print(dict2)
 print("------------------------------------")
 
@@ -198,21 +193,20 @@ print("------------------------------------")
 dict1[15] = "new"
 print(dict1)
 print("-------------------------------------")
-del dict1[18]       # 删除指定key-value  不存在时抛出异常
+del dict1[18]  # 删除指定key-value  不存在时抛出异常
 print(dict1)
 print("---------------------------------------")
-value = dict1.pop(19,"default")    # 删除key-value 不存在时使用默认值
+value = dict1.pop(19, "default")  # 删除key-value 不存在时使用默认值
 print(value)
-item = dict1.popitem()   # 随机删除一组 返回删除的值
+item = dict1.popitem()  # 随机删除一组 返回删除的值
 print(item)
 print("-------------------------------")
 
-
 # 访问字典
 # get方法 通过键返回值 不存在则返回默认值
-dict3 = {15:"dwe",97:"dada",85:"gegr"}
-print(dict3.get(15,"default"))
-print(dict3.get(19,0))
+dict3 = {15: "dwe", 97: "dada", 85: "gegr"}
+print(dict3.get(15, "default"))
+print(dict3.get(19, 0))
 print("------------------------------------")
 # items方法 返回字典的所有键值对
 print(dict3.items())
@@ -231,15 +225,13 @@ print("-------------------------------------------")
 for value in dict3.values():
     print(value)
 print("-----------------------------------------")
-for key,value in dict3.items():
-    print("key:{0},value:{1}".format(key,value))
+for key, value in dict3.items():
+    print("key:{0},value:{1}".format(key, value))
 print("------------------------------------------")
 
 # 字典推导式
-res = {k:v for k,v in dict3.items() if k % 5 == 0}
+res = {k: v for k, v in dict3.items() if k % 5 == 0}
 print(res)
 print("---------------------------------------")
-res2 = {k for k,v in dict3.items() if v == "gegr"}
+res2 = {k for k, v in dict3.items() if v == "gegr"}
 print(res2)
-
-
